@@ -1,0 +1,12 @@
+clc;
+clear all;
+clf;
+//Signal to Noise Ratio in dB for DM
+fm=input("Enter the modulating frequency in Hz: ");
+fs=input("Enter the sampling frequency in samples/second: ");
+ts=1/fs; //sampling interval
+fM=fm; //maximum message BW
+SNR= 3/(N*%pi^2* fm^2* fM*ts^3);
+SNR_dB=10*log10(SNR);
+disp(SNR_dB,"Maximum Output Signal to Noise Ratio for Delta Modulation in dB: ");
+
